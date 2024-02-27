@@ -7,7 +7,10 @@ import { WelcomePage } from "@refinedev/core";
 export default function IndexPage() {
   return (
     <Suspense>
-      <WelcomePage />
+      <main className="">
+        <h2 className="text-xl font-medium text-center">Home</h2>
+
+      </main>
     </Suspense>
   );
 }

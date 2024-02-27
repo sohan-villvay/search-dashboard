@@ -7,6 +7,8 @@ import React, { Suspense } from "react";
 
 import { dataProvider } from "@providers/data-provider";
 import "@styles/global.css";
+import Sidebar from "@components/sidebar/Sidebar";
+import Header from "@components/header/header";
 
 export const metadata: Metadata = {
   title: "Refine",
@@ -25,7 +27,6 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Suspense>
-          <GitHubBanner />
           <RefineKbarProvider>
             <DevtoolsProvider>
               <Refine
@@ -38,7 +39,14 @@ export default function RootLayout({
                   projectId: "PnOC5D-RKkMqZ-MGncgT",
                 }}
               >
-                {children}
+                <div className="flex min-h-screen w-screen bg-gray-50 ">
+                  <Sidebar />
+                  <Header />
+                  <div className="flex flex-col bg-none w-full min-h-screen ml-[272px] m-4 mt-20 ">
+                    {children}
+                  </div>
+                </div>
+
                 <RefineKbar />
               </Refine>
             </DevtoolsProvider>
