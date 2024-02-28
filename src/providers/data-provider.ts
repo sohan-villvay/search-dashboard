@@ -1,3 +1,5 @@
+"use client"
+
 import type { DataProvider } from "@refinedev/core";
 
 const API_URL = "https://65cda6eec715428e8b3ebc7d.mockapi.io/api/v1";

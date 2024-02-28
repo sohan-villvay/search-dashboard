@@ -1,3 +1,5 @@
+"use client"
+
 import { CreateProduct } from "./create";
 import { ListProducts } from "./list";
 import { ShowProduct } from "./show";

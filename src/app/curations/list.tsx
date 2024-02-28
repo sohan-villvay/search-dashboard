@@ -1,9 +1,12 @@
 "use client"
 
 import { useList } from "@refinedev/core";
+import { useTable } from "@refinedev/core";
 
 export const ListProducts = () => {
-  const { data, isLoading } = useList({ 
+  const { 
+    tableQueryResult: { data, isLoading },
+   } = useTable({ 
     resource: "synonyms",
     pagination: {
         mode: "off",
