@@ -1,11 +1,21 @@
 "use client"
 
-import { useList } from "@refinedev/core";
 import { useTable } from "@refinedev/core";
+import React from "react";
+
+import {
+    Table,
+    TableBody,
+    TableCell,
+    TableHead,
+    TableHeader,
+    TableRow,
+} from "@/components/ui/table"
 
 export const ListProducts = () => {
   const { 
     tableQueryResult: { data, isLoading },
+    
    } = useTable({ 
     resource: "synonyms",
     pagination: {
@@ -13,23 +23,27 @@ export const ListProducts = () => {
   }, 
 });
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
   return (
     <div>
-      <h1>Synonyms</h1>
-      <ul>
-        {data?.data?.map((synonyms) => (
-          <li key={synonyms.id}>
-            <p>
-              {synonyms.synonyms}
-              <br />
-            </p>
-          </li>
-        ))}
-      </ul>
+      <h1>Products</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          {data?.data?.map((synonyms) => (
+            <tr key={synonyms.id}>
+              <td>{synonyms.id}</td>
+              <td>{synonyms.synonyms}</td>
+
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
