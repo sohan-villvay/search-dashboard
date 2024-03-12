@@ -25,12 +25,12 @@ export const ListProducts = () => {
 
   return (
     <div>
-      <h1>Products</h1>
+      <h1>Synonyms</h1>
       <table>
         <thead>
           <tr>
             <th>ID</th>
-            <th>Name</th>
+            <th>Synonyms</th>
 
           </tr>
         </thead>

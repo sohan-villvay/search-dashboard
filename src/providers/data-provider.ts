@@ -56,7 +56,24 @@ create: async ({ resource, variables }) => {
 
     return { data };
   },
+  deleteOne: async ({ resource, id, variables, meta }) => {
+  const response = await fetch(`${API_URL}/${resource}/${id}`, {
+      method: "DELETE",
+      body: JSON.stringify(variables),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (response.status < 200 || response.status > 299) throw response;
+
+    const data = await response.json();
+
+
+  return {
+    data,
+  };
+},
   getApiUrl: () => API_URL,
-  deleteOne: () => { throw new Error("Not implemented"); },
   /* ... */
 };

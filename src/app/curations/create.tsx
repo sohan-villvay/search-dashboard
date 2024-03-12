@@ -1,5 +1,7 @@
 "use client"
 
+import { Button } from "@components/ui/button";
+import { Input } from "@components/ui/input";
 import { useForm } from "@refinedev/core";
 
 export const CreateProduct = () => {
@@ -16,15 +18,12 @@ export const CreateProduct = () => {
 
   return (
     <form onSubmit={onSubmit}>
-      <label htmlFor="id">id</label>
-      <input type="text" id="id" name="id" />
-
-      <label htmlFor="synonyms">Description</label>
-      <textarea id="synonyms" name="synonyms" />
+      <Input placeholder="Synonym ID" type="text" id="id" name="id" />
+      <Input placeholder="Synonyms" id="synonyms" name="synonyms" />
 
 
       {mutationResult.isSuccess && <span>successfully submitted!</span>}
-      <button type="submit">Submit</button>
+      <Button type="submit">Submit</Button>
     </form>
   );
 };

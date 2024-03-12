@@ -47,7 +47,7 @@ export const ProductTable: React.FC = () => {
         setPageSize,
     } = useTable<ISynonyms>({
         refineCoreProps: {
-            resource: "products",
+            resource: "synonyms",
         },
         columns,
     });
