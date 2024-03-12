@@ -6,6 +6,7 @@ import { ListProducts } from "./list";
 import { ShowProduct } from "./show";
 import { ProductTable } from "./table";
 import { Separator } from "@components/ui/separator";
+import { AddNewSet } from "./add-new";
 
 export default function Curations() {
     return (
@@ -14,9 +15,8 @@ export default function Curations() {
       <Card header="Synonyms with Refine" >
         <Separator className="my-4" />
 
+            <AddNewSet/>
             <CreateProduct/>
-            <ShowProduct/>
-            {/* <ListProducts/> */}
             <ProductTable/>
 
       </Card>

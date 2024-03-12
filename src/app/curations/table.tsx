@@ -10,6 +10,8 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table"
+import { Button } from "@chakra-ui/react";
+import { DeleteSynonym } from "./delete";
 
 export const ProductTable: React.FC = () => {
     const columns = React.useMemo<ColumnDef<ISynonyms>[]>(
@@ -30,6 +32,18 @@ export const ProductTable: React.FC = () => {
                     filterOperator: "contains",
                 },
             },
+            {
+                id: "actions",
+                enableHiding: false,
+                cell: ({ row }) => {
+                    const {id} = row.original
+
+                    return (
+                        <DeleteSynonym synonyms={row.original}/>
+                    )
+
+                }
+            }
         ],
         [],
     );
