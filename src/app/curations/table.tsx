@@ -10,7 +10,6 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table"
-import { Button } from "@chakra-ui/react";
 import { DeleteSynonym } from "./delete";
 
 export const ProductTable: React.FC = () => {

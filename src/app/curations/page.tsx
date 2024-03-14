@@ -16,7 +16,7 @@ export default function Curations() {
         <Separator className="my-4" />
 
             <AddNewSet/>
-            <CreateProduct/>
+            {/* <CreateProduct/> */}
             <ProductTable/>
 
       </Card>

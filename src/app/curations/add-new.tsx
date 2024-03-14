@@ -9,6 +9,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { Button } from "@components/ui/button";
+import { CreateProduct } from "./create";
 
 export const AddNewSet = () => {
 
@@ -20,12 +21,12 @@ export const AddNewSet = () => {
     </DialogTrigger>
     <DialogContent>
         <DialogHeader>
-        <DialogTitle>Are you absolutely sure?</DialogTitle>
+        <DialogTitle>New Synonym Set</DialogTitle>
         <DialogDescription>
-            This action cannot be undone. This will permanently delete your account
-            and remove your data from our servers.
+            Add ID and Synonyms
         </DialogDescription>
         </DialogHeader>
+        <CreateProduct/>
     </DialogContent>
     </Dialog>
   );
