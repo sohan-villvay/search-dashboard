@@ -15,6 +15,7 @@ export const AddNewSet = () => {
 
 
   return (
+    <div className="mb-3 ">
     <Dialog>
     <DialogTrigger>
         <Button>+ New Set</Button>
@@ -29,5 +30,6 @@ export const AddNewSet = () => {
         <CreateProduct/>
     </DialogContent>
     </Dialog>
+    </div>
   );
 };

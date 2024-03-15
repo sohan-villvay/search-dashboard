@@ -2,12 +2,15 @@
 import React from 'react';
 import { Cross2Icon } from "@radix-ui/react-icons"
 import { Button } from '@/components/ui/button';
+import { UpdateSynonymDelete } from '@app/curations/update-delete';
+import { RowData } from '@tanstack/react-table';
 
 interface Props {
-  items: string[];
+  item: string;
+  row: any;
 }
 
-const ClosableTag: React.FC<Props> = ({ items }) => {
+const ClosableTag: React.FC<Props> = ({ item, row }) => {
   const [selectedItems, setSelectedItems] = React.useState<string[]>([]);
 
   const handleRemoveItem = (item: string) => {
@@ -15,18 +18,12 @@ const ClosableTag: React.FC<Props> = ({ items }) => {
   };
 
   return (
-    <div className="flex flex-wrap">
-      {items.map((item, index) => (
-        <div key={index} className="m-2">
-          <span className="inline-flex items-center px-2 py-1 bg-gray-50 rounded-full text-gray-500 font-medium border">
+        <div className="m-2">
+          <span className="inline-flex items-center px-2 py-1 bg-sky-100 rounded-full text-sky-800 font-medium border">
             {item}
-            <Button variant="ghost" size="icon" className="transition ease-in-out duration-200  rounded-full h-5 w-5 ml-1 hover:bg-red-100 group">
-              <Cross2Icon className="h-3 w-3 group-hover:text-red-800" />
-            </Button>
+            <UpdateSynonymDelete synonym={item} row={row}/>
           </span>
         </div>
-      ))}
-    </div>
   );
 };
 

@@ -9,18 +9,15 @@ import { useMemo } from "react";
 
 export default function Curations() {
 
-
     return (
 
-    <div className="flex flex-row  gap-4">
+    <div className="flex flex-row gap-4">
       <Card header="Synonyms with Refine" >
         <Separator className="my-4" />
-
-            <Input/>
-            <AddNewSet/>
-            {/* <CreateProduct/> */}
-            {/* <ProductTable/> */}
-           <ListProducts/>
+     
+          <AddNewSet/>
+    
+          <ListProducts/>
 
       </Card>
     </div>

@@ -1,6 +1,6 @@
 "use client"
 
-import { useList, useTable } from "@refinedev/core";
+import { CrudFilters, useList, useTable } from "@refinedev/core";
 import React from "react";
 import { DataTable } from "./data-table";
 import { Synonyms, columns } from "./columns";
@@ -12,8 +12,8 @@ export const ListProducts = () => {
     pagination: {
         mode: "off",
   }, 
-});
 
+});
 
 const synonyms = data?.data ??[]
 
