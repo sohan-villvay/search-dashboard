@@ -13,9 +13,8 @@ import { CreateProduct } from "./create";
 
 export const AddNewSet = () => {
 
-
   return (
-    <div className="mb-3 ">
+    <div className="mb-3 bg-white">
     <Dialog>
     <DialogTrigger>
         <Button>+ New Set</Button>
@@ -27,7 +26,9 @@ export const AddNewSet = () => {
             Add ID and Synonyms
         </DialogDescription>
         </DialogHeader>
+
         <CreateProduct/>
+        
     </DialogContent>
     </Dialog>
     </div>
