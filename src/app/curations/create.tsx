@@ -9,7 +9,6 @@ export const CreateProduct = () => {
 
  const onSubmit = (event) => {
     event.preventDefault();
-    // const data = Object.fromEntries(new FormData(event.target).entries());
 
   const formData = new FormData(event.target);
     const synonymsValue = formData.get("synonyms");

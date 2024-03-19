@@ -1,16 +1,16 @@
 "use client"
  
 import { ColumnDef } from "@tanstack/react-table"
-import { DeleteSynonym } from "./delete";
+import { DeleteSynonym } from "../delete";
 import ClosableTag from "@components/synonyms/closable-tag";
-import { UpdateSynonymAdd } from "./update-add";
+import { UpdateSynonymAdd } from "../update-add";
  
-export type UoM = {
+export type Synonyms = {
   id: string;
-  uom: string[];
+  synonyms: string[];
 };
 
-export const columns: ColumnDef<UoM>[] = [
+export const columns: ColumnDef<Synonyms>[] = [
   {
                 id: "id",
                 header: "ID",
@@ -20,14 +20,14 @@ export const columns: ColumnDef<UoM>[] = [
                 },
             },
             {
-                id: "uom",
-                header: "UOM",
-                accessorKey: "uom",
+                id: "synonyms",
+                header: "Synonyms",
+                accessorKey: "synonyms",
                 meta: {
                     filterOperator: "contains",
                 },
                 cell: ({ row }) => {
-                const items: string[] = row.getValue("uom");
+                const items: string[] = row.getValue("synonyms");
 
                 return (
                     <div className="flex">

@@ -2,13 +2,13 @@
 
 import { CrudFilters, useList, useTable } from "@refinedev/core";
 import React from "react";
-import { DataTable } from "./data-table";
-import { Synonyms, columns } from "./columns";
+import { DataTable } from "../data-table";
+import { Synonyms, columns } from "../columns";
 
-export const ListSynonyms = () => {
+export const ListUoM = () => {
   
   const { tableQueryResult: { data, isLoading },} = useTable({ 
-    resource: "synonyms",
+    resource: "uom",
     pagination: {
         mode: "off",
   }, 
